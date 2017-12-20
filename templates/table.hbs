@@ -1,0 +1,46 @@
+<div class="table-inner component-inner">
+    {{> component this}}
+    <div class="table-wrapper">
+    <div class="table-widget component-widget">
+        <table class="" style="min-width: {{_minWidth}}px">
+            {{#each _rows}}
+            <tr class="table-row nth-child-{{@index}} {{_classes}}">
+                {{#each _cells}}
+                    {{#if _isHeading}}
+                        <th {{#if _rowSpan}}rowspan="{{_rowSpan}}"{{/if}}
+                        {{#if _colSpan}}colspan="{{_colSpan}}"{{/if}}
+                        {{#if _width}}style="width: {{_width}};"{{/if}}
+                        class="table-data table-heading nth-child-{{@index}} {{_classes}}">
+                            {{{text}}}
+                            {{#if _graphic._src}}
+                                <div class="table-data-graphic">
+                                    <img src="{{_graphic._src}}" aria-label="{{_graphic.alt}}" tabindex="0" draggable="false">
+                                </div>
+                                {{#if _graphic.attribution}}
+                                    <div class="graphic-attribution">{{{_graphic.attribution}}}</div>
+                                {{/if}}
+                            {{/if}}
+                        </th>
+                    {{else}}
+                        <td {{#if _rowSpan}}rowspan="{{_rowSpan}}"{{/if}}
+                        {{#if _colSpan}}colspan="{{_colSpan}}"{{/if}}
+                        {{#if _width}}style="width: {{_width}};"{{/if}}
+                        class="table-data nth-child-{{@index}} {{_classes}}">
+                            {{{text}}}
+                            {{#if _graphic._src}}
+                                <div class="table-data-graphic">
+                                    <img src="{{_graphic._src}}" aria-label="{{_graphic.alt}}" tabindex="0" draggable="false">
+                                </div>
+                                {{#if _graphic.attribution}}
+                                    <div class="graphic-attribution">{{{_graphic.attribution}}}</div>
+                                {{/if}}
+                            {{/if}}
+                        </td>
+                    {{/if}}
+                {{/each}}
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+    </div>
+</div>

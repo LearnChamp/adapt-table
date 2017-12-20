@@ -1,0 +1,198 @@
+{
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "$ref": "http://localhost/plugins/content/component/model.schema",
+  "globals": {
+    "ariaRegion": {
+      "type": "string",
+      "required": true,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "translatable": true
+    }
+  },
+  "properties":{
+    "_supportedLayout": {
+      "type": "string",
+      "required": true,
+      "enum": ["full-width", "half-width", "both"],
+      "default": "both",
+      "editorOnly": true
+    },
+    "instruction": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the instruction text",
+      "translatable": true
+    },
+    "_rowHeaderIndexes": {
+      "title": "Row Headings",
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "Indexes of rows that should be a heading.",
+      "translatable": false
+    },
+    "_colHeaderIndexes": {
+      "title": "Column Headings",
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "Indexes of colums that should be a heading.",
+      "translatable": false
+    },
+    "_minWidth": {
+      "title": "min Width",
+      "type": "Number",
+      "required": false,
+      "default": "",
+      "inputType": "Number",
+      "validators": [],
+      "help": "Smalsest width of the table.",
+      "translatable": false
+    },
+    "_rows": {
+      "type": "array",
+      "required": true,
+      "title": "Rows",
+      "items": {
+        "type": "object",
+        "required": true,
+        "properties": {
+          "_classes": {
+            "title": "Classes",
+            "type": "string",
+            "required": false,
+            "default": "",
+            "inputType": "Text",
+            "validators": [],
+            "help": "Add opational CSS classes to a table row",
+            "translatable": false
+          },
+          "_cells": {
+            "type": "array",
+            "required": true,
+            "title": "Cells",
+            "items": {
+              "properties": {
+                "_colSpan": {
+                  "title": "Column span",
+                  "type": "Number",
+                  "required": false,
+                  "default": "1",
+                  "inputType": "Number",
+                  "validators": [],
+                  "help": "How many columns should the cell span?",
+                  "translatable": false
+                },
+                "_rowSpan": {
+                  "title": "Row span",
+                  "type": "Number",
+                  "required": false,
+                  "default": "1",
+                  "inputType": "Number",
+                  "validators": [],
+                  "help": "How many rows should the cell span?",
+                  "translatable": false
+                },
+                "text": {
+                  "type": "Text",
+                  "required": false,
+                  "default": "",
+                  "inputType": "TextArea",
+                  "validators": [],
+                  "help": "",
+                  "translatable": true
+                },
+                "_classes": {
+                  "title": "Classes",
+                  "type": "string",
+                  "required": false,
+                  "default": "",
+                  "inputType": "Text",
+                  "validators": [],
+                  "help": "Add optional CSS classes to a table item",
+                  "translatable": false
+                },
+                "_graphic": {
+                  "title": "Graphic",
+                  "type": "object",
+                  "required": false,
+                  "properties": {
+                    "alt": {
+                      "type": "text",
+                      "required": false,
+                      "default": "",
+                      "title": "Alternative Text",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help": "The alternative text for this image",
+                      "translatable": true
+                    },
+                    "_src": {
+                      "type": "text",
+                      "required": false,
+                      "default": "",
+                      "title": "Src",
+                      "inputType": "Asset:image",
+                      "validators": [],
+                      "help": "Optional image which will be rendered with the item body text"
+                    },
+                    "attribution": {
+                      "type": "text",
+                      "required": false,
+                      "default": "",
+                      "title": "Attribution",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help": "Text to be displayed as an attribution",
+                      "translatable": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "_columnWidths": {
+      "type": "array",
+      "required": false,
+      "title": "Column widths",
+      "items": {
+        "type": "object",
+        "required": true,
+        "properties": {
+          "_column": {
+            "type": "Number",
+            "required": true,
+            "default": 0,
+            "title": "Column",
+            "inputType": "Number",
+            "validators": ["required"],
+            "help": "Required index of column that the following settings should be applied to"
+          },
+          "_width": {
+            "type": "string",
+            "required": false,
+            "default": "",
+            "title": "Width",
+            "inputType": "Text",
+            "validators": [],
+            "help": "Width of the column as a valid css value"
+          }
+        }
+      }
+    }
+  }
+}

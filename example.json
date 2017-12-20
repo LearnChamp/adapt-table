@@ -1,0 +1,81 @@
+	{
+		"_id":"c-05",
+		"_parentId":"b-05",
+		"_type":"component",
+		"_component":"table",
+		"_classes":"",
+		"_layout":"full",
+		"title":"First look: Table",
+		"displayTitle":"Normal Table",
+		"body":"",
+		"instruction":"",
+		"_rowHeaderIndexes": "",
+		"_colHeaderIndexes": "",
+		"_minWidth": 800,
+		"_rows": [
+			{
+				"_classes": "",
+				"_cells": [
+					{
+						"_colSpan": "1",
+						"_rowSpan": "1",
+						"text": "",
+						"_classes": "",
+						"_isHeading": false,
+						"_graphic": {
+							"_src": "",
+							"alt": "",
+							"attribution":""
+						}
+					},
+					{
+						"_colSpan": "1",
+						"_rowSpan": "1",
+						"text": "",
+						"_classes": "",
+						"_isHeading": false,
+						"_graphic": {
+							"_src": "",
+							"alt": "",
+							"attribution":""
+						}
+					}
+				]
+			},
+			{
+				"_classes": "",
+				"_cells": [
+					{
+						"_colSpan": "1",
+						"_rowSpan": "1",
+						"text": "",
+						"_classes": "",
+						"_isHeading": false,
+						"_graphic": {
+							"_src": "",
+							"alt": "",
+							"attribution":""
+						}
+					},
+					{
+						"_colSpan": "1",
+						"_rowSpan": "1",
+						"text": "",
+						"_classes": "",
+						"_isHeading": false,
+						"_graphic": {
+							"_src": "",
+							"alt": "",
+							"attribution":""
+						}
+					}
+				]
+			}
+		],
+		"_columnWidths": [
+			{
+				"_column": 0,
+				"_width": 200
+			}
+		]
+	}
