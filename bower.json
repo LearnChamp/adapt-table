@@ -1,17 +1,17 @@
 {
-  "name": "adapt-table",
-  "version": "1.0.0",
-  "repository": "git://github.com/LearnChamp/adapt-table",
-  "framework": ">=2.0.0",
-  "homepage": "",
-  "issues": "",
-  "displayName" : "Table",
-  "component" : "table",
-  "description": "A table Component",
-  "main": "/js/adapt-table.js",
-  "keywords": [
-    "adapt-plugin",
-    "adapt-component"
-  ],
-  "license": ""
+    "name": "adapt-table",
+    "repository": "git://github.com/LearnChamp/adapt-table",
+    "framework": ">=2.0.0",
+    "version": "1.0.0",
+    "homepage": "",
+    "issues": "",
+    "displayName": "Table",
+    "component": "table",
+    "description": "A table Component",
+    "main": "/js/adapt-table.js",
+    "keywords": [
+        "adapt-plugin",
+        "adapt-component"
+    ],
+    "license": ""
 }
